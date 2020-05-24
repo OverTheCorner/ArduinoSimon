@@ -2,11 +2,11 @@
 // Over The Corner's Simon game for Arduino
 #include "pitches.h"
 
-const int BUZZER=10;
+const int BUZZER=10;                                          //Buzzer output pin
 const char COLORS[]={'R', 'Y', 'G', 'B'};                     //Color sequence
 const int NOTESMAP[]={NOTE_E4, NOTE_CS4, NOTE_A4, NOTE_E5};   //Corresponding notes
 const int LED_PINS[]={9, 7, 5, 3};                            //corresponding pins for LEDs
-const int SW_PINS[]={8, 6, 4, 2};                             //corresponding pins for the buttons
+const int SW_PINS[]={8, 6, 4, 2};                             //Corresponding pins for the buttons
 const int NUM_OF_LEDS=4;                                      //number of LEDs used
 const int MAX_LEVEL=25;                                       //upper limit to how many levels can be played
 const int TIME_LIMIT=5;                                       //time limit for a button press, in seconds
