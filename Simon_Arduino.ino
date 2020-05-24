@@ -1,15 +1,15 @@
 //Simon Game for Arduino
-// 4 Colors
+// Over The Corner's Simon game for Arduino
 #include "pitches.h"
 
 const int BUZZER=10;
-const char COLORS[]={'R', 'Y', 'G', 'B'};  
-const int NOTESMAP[]={NOTE_E4, NOTE_CS4, NOTE_A4, NOTE_E5};
-const int LED_PINS[]={9, 7, 5, 3};
-const int SW_PINS[]={8, 6, 4, 2};
-const int NUM_OF_LEDS=4;
-const int MAX_LEVEL=25;
-const int TIME_LIMIT=5; //in seconds
+const char COLORS[]={'R', 'Y', 'G', 'B'};                     //Color sequence
+const int NOTESMAP[]={NOTE_E4, NOTE_CS4, NOTE_A4, NOTE_E5};   //Corresponding notes
+const int LED_PINS[]={9, 7, 5, 3};                            //corresponding pins for LEDs
+const int SW_PINS[]={8, 6, 4, 2};                             //corresponding pins for the buttons
+const int NUM_OF_LEDS=4;                                      //number of LEDs used
+const int MAX_LEVEL=25;                                       //upper limit to how many levels can be played
+const int TIME_LIMIT=5;                                       //time limit for a button press, in seconds
 
 int MELODY[MAX_LEVEL];
 
@@ -246,31 +246,4 @@ void toggleAll(int state){
     toggleLED(LED_PINS[i], state);
   }
 }
- /* Piano Mode
-    for (int i = BLUE_LED; i<=RED_LED; i+=2){
-    toggleLED(i, checkBttn(i-1));
-    if (checkBttn(i-1)){
-      playNote(i);
-    }
-  }
-  */
-
- /* Button Counter
- int count;
-  
- while (true) {
-    int bttn=SW_YELLOW;
-        
-    while (!checkBttn(bttn)){
-      continue;
-    }
-  
-    count++;
-    Serial.println(count);
-  
-    while(checkBttn(bttn)){
-      continue;
-    }
- }
- */
- //GFVA
+//GFVA
